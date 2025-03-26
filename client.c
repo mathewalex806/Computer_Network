@@ -5,6 +5,8 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include <stdbool.h>
+
 
 #define BUFFER_SIZE 1024
 #define PORT 5555 // Updated port number
@@ -42,7 +44,9 @@ int main()
     }
 
     // Send message
-    strcpy(buffer, "Hi Server, This is the Client.");
+    while(true)
+    {
+    scanf("%s",buffer);
     send(clientfd, buffer, strlen(buffer), 0);
     printf("Message sent to server.\n");
 
@@ -50,6 +54,8 @@ int main()
     memset(buffer, 0, BUFFER_SIZE); // Clear buffer
     recv(clientfd, buffer, BUFFER_SIZE, 0);
     printf("Server Response: %s\n", buffer);
+    }
+    
 
     // Close connection
     close(clientfd);

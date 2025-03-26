@@ -5,6 +5,7 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <arpa/inet.h>
+#include <stdbool.h>
 
 #define BUFFER_SIZE 1024
 #define PORT 5555 // Use a port above 1024
@@ -56,15 +57,19 @@ int main()
     }
 
     // Receive data
-    recv(clientfd, buffer, BUFFER_SIZE, 0);
-    printf("Received: %s\n", buffer);
+    while(true)
+    {
+        recv(clientfd, buffer, BUFFER_SIZE, 0);
+        printf("Received: %s\n", buffer);
 
-    // Send response
-    send(clientfd, buffer, strlen(buffer), 0);
+        scanf("%s",buffer);
+        send(clientfd, buffer, strlen(buffer), 0);
 
-    // Close connections
-    close(clientfd);
-    close(serverfd);
-
+        
+    }
+    
+// Close connections
+close(clientfd);
+close(serverfd);
     return 0;
 }
