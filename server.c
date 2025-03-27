@@ -64,6 +64,7 @@ int main()
 
         scanf("%s",buffer);
         send(clientfd, buffer, strlen(buffer), 0);
+        memset(buffer, 0, BUFFER_SIZE);
 
         
     }

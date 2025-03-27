@@ -48,6 +48,7 @@ int main()
     {
     scanf("%s",buffer);
     send(clientfd, buffer, strlen(buffer), 0);
+    memset(buffer, 0, BUFFER_SIZE); 
     printf("Message sent to server.\n");
 
     // Receive response
