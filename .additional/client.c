@@ -14,7 +14,7 @@ int main()
     socklen_t addrlen = sizeof(serveraddr);
 
     char buffer[1024];
-    char message[1024] = "1234";
+    char message[1024] = "4.5";
 
     clientfd = socket(AF_INET, SOCK_DGRAM, 0);
     serveraddr.sin_addr.s_addr = inet_addr("127.0.0.1");

@@ -33,38 +33,39 @@ void main()
     
 
     //converting number to string
-    int num = atoi(buffer);
-    printf("%d",num);
-    int cpy = num;
-    while(cpy>0)
-    {
-        int digit = cpy%10;
-        if (digit == 1)
-        printf("one ");
-        else if (digit == 2)
-        printf("two ");
-        else if (digit == 3)
-        printf("three ");
-        else if (digit == 4)
-        printf("four ");
-        else if (digit == 5)
-        printf("five ");
-        else if (digit == 6)
-        printf("six ");
-        else if (digit == 7)
-        printf("seven ");
-        else if (digit == 8)
-        printf("eight ");
-        else if (digit == 9)
-        printf("nine ");
-        else if (digit == 0)
-        printf("zero "); 
+    printf("%s\n",buffer);
+    float num = atof(buffer);
+    printf("%f",num);
+    // int cpy = num;
+    // while(cpy>0)
+    // {
+    //     int digit = cpy%10;
+    //     if (digit == 1)
+    //     printf("one ");
+    //     else if (digit == 2)
+    //     printf("two ");
+    //     else if (digit == 3)
+    //     printf("three ");
+    //     else if (digit == 4)
+    //     printf("four ");
+    //     else if (digit == 5)
+    //     printf("five ");
+    //     else if (digit == 6)
+    //     printf("six ");
+    //     else if (digit == 7)
+    //     printf("seven ");
+    //     else if (digit == 8)
+    //     printf("eight ");
+    //     else if (digit == 9)
+    //     printf("nine ");
+    //     else if (digit == 0)
+    //     printf("zero "); 
 
-        else
-        printf("\n");
+    //     else
+    //     printf("\n");
 
-        cpy=cpy/10;
-    }
+    //     cpy=cpy/10;
+    // }
 
     sendto(serverfd, message, 1024, 0, (struct sockaddr *)&clientaddr, addrlen);
     close(serverfd);
