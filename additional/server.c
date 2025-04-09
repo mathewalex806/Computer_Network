@@ -40,25 +40,25 @@ void main()
     {
         int digit = cpy%10;
         if (digit == 1)
-        printf("one");
+        printf("one ");
         else if (digit == 2)
-        printf("two");
+        printf("two ");
         else if (digit == 3)
-        printf("three");
+        printf("three ");
         else if (digit == 4)
-        printf("four");
+        printf("four ");
         else if (digit == 5)
-        printf("five");
+        printf("five ");
         else if (digit == 6)
-        printf("six");
+        printf("six ");
         else if (digit == 7)
-        printf("seven");
+        printf("seven ");
         else if (digit == 8)
-        printf("eight");
+        printf("eight ");
         else if (digit == 9)
-        printf("nine");
+        printf("nine ");
         else if (digit == 0)
-        printf("zero"); 
+        printf("zero "); 
 
         else
         printf("\n");
